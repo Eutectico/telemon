@@ -32,7 +32,7 @@ A Telegram bot for monitoring servers using Prometheus and Grafana. Receive real
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Eutectico/telemon.git
 cd telemon
 
 # Copy environment file
