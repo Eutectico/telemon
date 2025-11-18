@@ -1,0 +1,44 @@
+# Telegram Bot Configuration
+telegram:
+  # Get your bot token from @BotFather on Telegram
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+
+  # List of authorized Telegram user IDs (get your ID from @userinfobot)
+  authorized_users:
+    - 123456789  # Replace with your Telegram user ID
+
+# Prometheus Configuration
+prometheus:
+  url: "http://localhost:9090"
+  # Query interval in seconds
+  query_interval: 60
+
+# Grafana Configuration (optional)
+grafana:
+  url: "http://localhost:3000"
+  # API token for Grafana (optional, for advanced features)
+  api_token: "${GRAFANA_API_TOKEN}"
+
+# Alertmanager Webhook Configuration
+alertmanager:
+  # Port for the webhook receiver
+  webhook_port: 9119
+  # Path for receiving alerts
+  webhook_path: "/alerts"
+
+# Alert Configuration
+alerts:
+  # Emoji indicators for alert severity
+  emoji:
+    critical: "🔴"
+    warning: "🟡"
+    info: "🔵"
+    resolved: "🟢"
+
+  # Alert aggregation window in seconds
+  aggregation_window: 30
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "logs/bot.log"
